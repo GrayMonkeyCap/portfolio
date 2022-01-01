@@ -2,9 +2,11 @@
     display: flex;
     align-self: center;
     justify-content: center;
+    
 }
 
 .intro{
+    position: relative;
     display: flex;
     flex-direction: column;
     margin-right: 120px;
@@ -17,8 +19,8 @@
 position: absolute;
 width: 423px;
 height: 423px;
-left: 104px;
-top: 130px;
+left: 30px;
+top: 0px;
 z-index: -1;
 background: linear-gradient(128.3deg, #8A2525 35.84%, rgba(0, 71, 255, 0) 61.23%);
 filter: blur(90px);
@@ -61,4 +63,14 @@ opacity: 0.8;
     height: 476px; 
     background: linear-gradient(180deg, rgba(0, 0, 0, 0) 44.4%, #000000 94.36%);
     margin-top: 100px;
+}
+
+.arrows{
+    display: flex;
+    justify-content: center;
+    margin-top: 60px;
+}
+.arrows img{
+    width: 80px;
+    height: 91px;
 }
