@@ -8,6 +8,7 @@
 .row{
     display: flex;
     flex-wrap: wrap;
+    max-width: 1200px;
     justify-content: center;
     
 }
