@@ -5,17 +5,9 @@
     margin-top: 180px;
 }
 
-.row{
-    display: flex;
-    flex-wrap: wrap;
-    max-width: 1200px;
-    justify-content: center;
-    
-}
-
 .heading{
     position: relative;
-    font-size: 144px;
+    font-size: 151px;
     font-weight: bold;
     background: linear-gradient(180deg, rgba(255, 255, 255, 0.15) 30%, rgba(255, 255, 255, 0) 80%);
     background-clip: text;
@@ -24,33 +16,40 @@
 
 .subheading{
     position: absolute; 
-    top: 70px;
-    left: 43%;
+    top: 80px;
+    left: 40%;
     font-size: 35px;
     font-weight: bold;
     background: linear-gradient(90deg, rgb(228, 64, 103) 0%, rgb(82, 85, 228) 80%);
     background-clip: text;
     color: transparent;
 }
+.contentProject{
+    display: flex;
+    width: 100%;
+    justify-content: space-evenly;
+    
+}
 
-.card{
+.ProjectCard{
     display: flex;
     flex-direction: column;
     align-items: center;
-    width: 310px;
-    margin: 60px 15px ;
+    width: 340px;
+    margin: 80px 0px 200px 0;
 }
+.ProjectIcon img{
+    height: 60px;
+    width: 100px;
 
-.head{
+}
+.ProjectHead{
     font-size: 22px;
-    margin-top: 20px;
-    font-weight: 400;
-}
-
-.desc{
-    font-size: 18px ;
-    margin-top: 20px;
     text-align: center;
+    margin: 45px 0 25px 0;
+}
+.ProjectDesc{
+    text-align: center;
+    font-size: 18px;
     color:rgba(142, 142, 142, 1);
-    
 }
