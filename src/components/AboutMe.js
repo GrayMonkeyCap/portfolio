@@ -2,6 +2,7 @@ import React from 'react';
 import styles from './AboutMe.module.css'
 import { useNavigate } from 'react-router-dom';
 
+
 const AboutMe=()=>{
     const navigate=useNavigate();
     return(
