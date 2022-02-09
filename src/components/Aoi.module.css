@@ -54,3 +54,28 @@
     color:rgba(142, 142, 142, 1);
     
 }
+@media only screen and (max-width:1000px) {
+    .heading{
+        font-size: 90px;
+    }
+    .subheading{
+        top: 40px;
+        left: 30%;
+    }
+    .content p{
+        font-size: 19px;
+    }
+}
+@media only screen and (max-width:630px) {
+    .heading{
+        font-size: 45px;
+    }
+    .subheading{
+        top: 20px;
+        font-size: 20px;
+        left: 30%;
+    }
+    .content p{
+        font-size: 16px;
+    }
+}

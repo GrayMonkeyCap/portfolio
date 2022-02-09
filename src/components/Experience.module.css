@@ -34,3 +34,22 @@
     text-align: center;
     margin-bottom: 15px;
 }
+@media only screen and (max-width:1024px) {
+    .heading{
+        font-size: 90px;
+    }
+    .subheading{
+        top: 40px;
+        left: 30%;
+    }
+}
+@media only screen and (max-width:600px) {
+    .heading{
+        font-size: 45px;
+    }
+    .subheading{
+        top: 20px;
+        font-size: 25px;
+        left: 30%;
+    }
+}

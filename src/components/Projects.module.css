@@ -28,6 +28,8 @@
     display: flex;
     width: 100%;
     justify-content: space-evenly;
+    max-width: 1200px;
+    flex-wrap: wrap;
     
 }
 
@@ -52,4 +54,30 @@
     text-align: center;
     font-size: 18px;
     color:rgba(142, 142, 142, 1);
+}
+
+@media only screen and (max-width:1020px) {
+    .heading{
+        font-size: 90px;
+    }
+    .subheading{
+        top: 40px;
+        left: 30%;
+    }
+    .ProjectCard{
+        margin: 50px 0 50px 0;
+    }
+}
+@media only screen and (max-width:630px) {
+    .heading{
+        font-size: 47px;
+    }
+    .subheading{
+        top: 20px;
+        font-size: 25px;
+        left: 30%;
+    }
+    .content p{
+        font-size: 16px;
+    }
 }

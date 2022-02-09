@@ -1,6 +1,6 @@
 import React from 'react';
-import styles from './About2.module.css'
-const About2=()=>{
+import styles from './AboutIntro.module.css'
+const AboutIntro=()=>{
     return(
         <>
             
@@ -23,4 +23,4 @@ const About2=()=>{
         
     )
 }
-export default About2;
+export default AboutIntro;

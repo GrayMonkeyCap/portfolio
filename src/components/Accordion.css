@@ -35,4 +35,19 @@
     color: rgba(142, 142, 142, 1);
 
   }
-  
+  .accordion-title svg{
+    margin-left: 30px;
+  }
+  @media only screen and (max-width:630px) {
+    .accordion-wrapper{
+        margin-bottom: 30px;
+        
+    }
+    .accordion-title{
+      font-size: 16px;
+      padding: 0;
+    }
+    .accordion-content{
+      padding: 0;
+    }
+}

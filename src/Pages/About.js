@@ -1,12 +1,12 @@
 import React from 'react';
-import About2 from '../components/About2';
+import AboutIntro from '../components/AboutIntro';
 import Experience from '../components/Experience';
 import Questions from '../components/Questions';
 
 const About=()=>{
     return(
         <>
-            <About2/>
+            <AboutIntro/>
             <Experience/>
             <Questions/>
         </>

@@ -91,3 +91,46 @@
     height: 7px; 
     border-radius: 100px;
 }
+
+
+@media only screen and (max-width:1024px) {
+    .heading{
+        font-size: 90px;
+    }
+    .subheading{
+        top: 40px;
+        left: 30%;
+    }
+    .content p{
+        font-size: 19px;
+    }
+    .row div {
+        font-size: 12px;
+    }
+    .card{
+        flex-wrap: wrap;
+    }
+    .skilldata{
+       margin-top: 40px;
+        
+    }
+}
+@media only screen and (max-width:630px) {
+    .heading{
+        font-size: 45px;
+    }
+    .subheading{
+        top: 20px;
+        font-size: 22px;
+        left: 30%;
+    }
+    .content p{
+        font-size: 16px;
+    }
+    .row div{
+        font-size: 8px;
+    }
+    .skilldata{
+        margin-left: 0;
+    }
+}

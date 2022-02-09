@@ -3,6 +3,7 @@
     display: flex;
     flex-direction: column;
     align-items: center;
+    width: 100vw;
 }
 .contact {
     margin-top: 80px;
@@ -55,4 +56,14 @@
     justify-content: space-between;
     margin-top: 40px;
     
+}
+@media only screen and (max-width:600px) {
+    .contactemail{
+        flex-direction: column;
+        align-items: center;
+    }
+    .contactemail input{
+        width: 300px;
+        margin-right: 0;
+    }
 }
