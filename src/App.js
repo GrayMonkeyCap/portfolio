@@ -4,6 +4,8 @@ import { BrowserRouter, Route , Routes } from 'react-router-dom';
 import Home from './Pages/Home';
 import About from './Pages/About';
 import ProjectPage from './components/ProjectPage';
+import Portfolio from './Pages/Portfolio';
+import AddProjects from './Pages/AddProjects';
 function App() {
   return (
     <BrowserRouter>
@@ -12,6 +14,8 @@ function App() {
         <Route index element={<Home />}/>
         <Route path= "/about" element={<About/>}/>
         <Route path= "/projectpage" element={<ProjectPage/>}/>
+        <Route path="/portfolio" element={<Portfolio/>}/>
+        <Route path="/addprojects" element={<AddProjects/>}/>
       </Routes>
     </BrowserRouter>
   );
