@@ -46,8 +46,9 @@
     
 }
 .card{
-    display: flex;
-    justify-content: center;
+    width: 90%;
+    /* display: flex;
+    justify-content: center; */
     /* swidth: 30%; */
     
 }

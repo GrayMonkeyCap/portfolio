@@ -5,7 +5,8 @@ import Home from './Pages/Home';
 import About from './Pages/About';
 import ProjectPage from './components/ProjectPage';
 import Portfolio from './Pages/Portfolio';
-import AddProjects from './Pages/AddProjects';
+import Publication from './Pages/Publication';
+
 function App() {
   return (
     <BrowserRouter>
@@ -15,7 +16,7 @@ function App() {
         <Route path= "/about" element={<About/>}/>
         <Route path= "/projectpage" element={<ProjectPage/>}/>
         <Route path="/portfolio" element={<Portfolio/>}/>
-        <Route path="/addprojects" element={<AddProjects/>}/>
+        <Route path="/publication" element={<Publication/>}/>
       </Routes>
     </BrowserRouter>
   );

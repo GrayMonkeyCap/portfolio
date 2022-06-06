@@ -6,7 +6,7 @@ const PortfolioCard=(props)=>{
     return(
         <div className={styles.container}>
          <div className={styles.image}>
-             <img src={props.image}></img>
+            <img src={props.image?props.image:"/logo192.png"}></img>
          </div>
          <div className={styles.projectcontent}>
              <div className={styles.heading}>{props.heading}</div>
@@ -16,6 +16,7 @@ const PortfolioCard=(props)=>{
              </Link>
              </div>
              <div className={styles.author}>{props.author}</div>
+             <div className={styles.duration}>{props.duration}</div>
          </div>
 
         </div>
