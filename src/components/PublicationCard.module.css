@@ -13,13 +13,14 @@
     display: flex;
     flex-direction: column;
 }
-.heading{
+.heading a{
     font-size: 25px;
     margin-bottom: 15px;
     cursor: pointer;
-   
+    color: white;
+   text-decoration: none;
 }
-.heading:hover{
+.heading a:hover{
     background: linear-gradient(90deg, rgb(228, 64, 103) 0%, rgb(82, 85, 228) 80%);
     background-clip: text;
     color: transparent;

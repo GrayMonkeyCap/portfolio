@@ -3,6 +3,10 @@ import ProjectData from './ProjectData';
 import styles from './Projects.module.css'
 import "react-multi-carousel/lib/styles.css";
 import Carousel from 'react-multi-carousel';
+import db from '../Firebase/firebase';
+import { useEffect } from 'react';
+import { collection, getDocs } from 'firebase/firestore/lite';
+import { useState } from 'react/cjs/react.development';
 
 const responsive = {
   desktop: {
@@ -11,35 +15,46 @@ const responsive = {
     slidesToSlide: 3 // optional, default to 1.
   },
   tablet: {
-    breakpoint: { max: 1024, min: 464 },
+    breakpoint: { max: 1024, min: 760 },
     items: 2,
     slidesToSlide: 2 // optional, default to 1.
   },
   mobile: {
-    breakpoint: { max: 464, min: 0 },
+    breakpoint: { max: 760, min: 0 },
     items: 1,
     slidesToSlide: 1 // optional, default to 1.
   }
 };
-const ProjectCard=[{icon:'assets/projecticon.png',heading:'AUTOMATING AWS EC2 SHUTDOWN WITH BASH SCRIPTS',desc:"A helpful tutorial I wrote recently on how to set up a Bash script that utilized the AWS CLI to start, log into, then shutdown an EC2 instance. (I didn't want to forget the instance was running and lose money)"},
 
-{icon:'assets/projecticon.png',heading:'AUTOMATING AWS EC2 SHUTDOWN WITH BASH SCRIPTS',desc:"A helpful tutorial I wrote recently on how to set up a Bash script that utilized the AWS CLI to start, log into, then shutdown an EC2 instance. (I didn't want to forget the instance was running and lose money)"},
-
-{icon:'assets/projecticon.png',heading:'AUTOMATING AWS EC2 SHUTDOWN WITH BASH SCRIPTS',desc:"A helpful tutorial I wrote recently on how to set up a Bash script that utilized the AWS CLI to start, log into, then shutdown an EC2 instance. (I didn't want to forget the instance was running and lose money)"},
-
-{icon:'assets/projecticon.png',heading:'AUTOMATING AWS EC2 SHUTDOWN WITH BASH SCRIPTS',desc:"A helpful tutorial I wrote recently on how to set up a Bash script that utilized the AWS CLI to start, log into, then shutdown an EC2 instance. (I didn't want to forget the instance was running and lose money)"},
-
-{icon:'assets/projecticon.png',heading:'AUTOMATING AWS EC2 SHUTDOWN WITH BASH SCRIPTS',desc:"A helpful tutorial I wrote recently on how to set up a Bash script that utilized the AWS CLI to start, log into, then shutdown an EC2 instance. (I didn't want to forget the instance was running and lose money)"}]
 const Projects=()=>{
+  const[projectData,setProjectData]=useState([]);
+    useEffect(()=>{
+        try{
+            Fetchdata();
+        }
+        catch(error){
+            console.log(error)
+        }
+        
+    },[])
+
+    const Fetchdata = async()=>{
+        const projectCol = collection(db, 'project');
+        const projectSnapshot = await getDocs(projectCol);
+        const projectList = projectSnapshot.docs.map(doc => {
+          return ({...doc.data(),id:doc.id})
+        });
+        setProjectData(projectList);
+    }
     return(
         <div className={styles.container}>
         <div className={styles.heading}>Latest Projects
             <div className={styles.subheading}>Latest Projects</div>
         </div>
         <Carousel containerClass={styles.contentProject} responsive={responsive}>
-        {ProjectCard.map((data)=>{
+        {projectData.map((data)=>{
             return(
-                <ProjectData icon={data.icon} heading={data.heading} desc={data.desc}/>
+                <ProjectData id={data.id} icon={data.image} heading={data.heading} desc={data.desc}/>
             )
         })}
         </Carousel>

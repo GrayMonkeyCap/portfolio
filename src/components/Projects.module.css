@@ -25,11 +25,11 @@
     color: transparent;
 }
 .contentProject{
-    display: flex;
+    /* display: flex; */
     width: 100%;
-    justify-content: space-evenly;
+    /* justify-content: space-evenly; */
     max-width: 1200px;
-    flex-wrap: wrap;
+    /* flex-wrap: wrap; */
     
 }
 
@@ -49,6 +49,10 @@
     font-size: 22px;
     text-align: center;
     margin: 45px 0 25px 0;
+}
+.ProjectHead a{
+    text-decoration: none;
+    color: white;
 }
 .ProjectDesc{
     text-align: center;

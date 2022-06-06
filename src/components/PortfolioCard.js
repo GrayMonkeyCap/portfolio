@@ -9,9 +9,11 @@ const PortfolioCard=(props)=>{
             <img src={props.image?props.image:"/logo192.png"}></img>
          </div>
          <div className={styles.projectcontent}>
-             <div className={styles.heading}>{props.heading}</div>
+             <div className={styles.heading}><Link to={`/projectpage/${props.id}`}>
+                {props.heading}
+             </Link></div>
              <div className={styles.desc}>{props.desc.slice(0,130)+"... "} 
-             <Link to="/projectpage">
+             <Link to={`/projectpage/${props.id}`}>
                 Read More
              </Link>
              </div>
