@@ -6,6 +6,7 @@ import About from './Pages/About';
 import ProjectPage from './components/ProjectPage';
 import Portfolio from './Pages/Portfolio';
 import Publication from './Pages/Publication';
+import PublicationPage from './components/PublicationPage';
 
 function App() {
   return (
@@ -15,6 +16,7 @@ function App() {
         <Route index element={<Home />}/>
         <Route path= "/about" element={<About/>}/>
         <Route path= "/projectpage/:id" element={<ProjectPage/>}/>
+        <Route path= "/publication/:id" element={<PublicationPage/>}/>
         <Route path="/portfolio" element={<Portfolio/>}/>
         <Route path="/publication" element={<Publication/>}/>
       </Routes>

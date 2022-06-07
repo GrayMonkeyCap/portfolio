@@ -7,8 +7,12 @@ const PublicationCard=(props)=>{
         <div className={styles.container}>
          
          <div className={styles.projectcontent}>
-             <div className={styles.heading}><a href={props.link}>{props.title}</a></div>
-             <div className={styles.desc}>{props.abstract} </div>
+             <div className={styles.heading}><Link to={`/publication/${props.id}`}>{props.title}</Link></div>
+             <div className={styles.desc}>{props.abstract.slice(0,130)+"... "} 
+             <Link to={`/publication/${props.id}`}>
+                Read More
+             </Link>
+             </div>
              <div className={styles.publishedin}>{props.publishedin}
              <a href={props.link}>{props.link}</a>
              </div>
