@@ -24,7 +24,9 @@ const PortfolioMain=()=>{
     const Fetchdata = async()=>{
         const projectCol = collection(db, 'project');
         const projectSnapshot = await getDocs(projectCol);
-        const projectList = projectSnapshot.docs.map(doc => doc.data());
+        const projectList = projectSnapshot.docs.map(doc => {
+            return ({...doc.data(),id:doc.id})
+          });
         setPortfolioData(projectList);
     }
     return(
@@ -37,7 +39,7 @@ const PortfolioMain=()=>{
         <div className={styles.cards}>
         {portfolioData.map((data)=>{
             return(
-                <PortfolioCard image={data.image} heading={data.heading} desc={data.desc} duration={data.duration} author={data.author}/>
+                <PortfolioCard id={data.id} image={data.image} heading={data.heading} desc={data.desc} duration={data.duration} author={data.author}/>
             )
         })}
 

@@ -50,6 +50,8 @@
     /* display: flex;
     justify-content: center; */
     /* swidth: 30%; */
+    max-width: 1200px;
+
     
 }
 .skilldata{
