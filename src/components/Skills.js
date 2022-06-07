@@ -3,6 +3,7 @@ import Carousel from 'react-multi-carousel';
 import SkillData from './SkillData';
 import styles from './Skills.module.css'
 import "react-multi-carousel/lib/styles.css";
+import './carousel.css';
 
 const responsive = {
   desktop: {
