@@ -6,7 +6,8 @@ import Carousel from 'react-multi-carousel';
 import db from '../Firebase/firebase';
 import { useEffect } from 'react';
 import { collection, getDocs } from 'firebase/firestore/lite';
-import { useState } from 'react/cjs/react.development';
+import { useState } from 'react';
+import './carousel.css';
 
 const responsive = {
   desktop: {

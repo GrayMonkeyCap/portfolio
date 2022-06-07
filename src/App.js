@@ -7,6 +7,8 @@ import ProjectPage from './components/ProjectPage';
 import Portfolio from './Pages/Portfolio';
 import Publication from './Pages/Publication';
 
+
+
 function App() {
   return (
     <BrowserRouter>
