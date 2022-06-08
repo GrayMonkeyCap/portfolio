@@ -24,7 +24,9 @@ const PublicationMain=()=>{
     const Fetchdata = async()=>{
         const publicationCol = collection(db, 'publication');
         const publicationSnapshot = await getDocs(publicationCol);
-        const publicationList = publicationSnapshot.docs.map(doc => doc.data());
+        const publicationList = publicationSnapshot.docs.map(doc => {
+            return ({...doc.data(),id:doc.id})
+          });
         setpublicationData(publicationList);
     }
     return(
@@ -37,7 +39,7 @@ const PublicationMain=()=>{
         <div className={styles.cards}>
         {publicationData.map((data)=>{
             return(
-                <PublicationCard title={data.title} abstract={data.abstract} publishedin={data.publishedin} link={data.link} author={data.author}/>
+                <PublicationCard id={data.id} title={data.title} abstract={data.abstract} publishedin={data.publishedin} link={data.link} author={data.author}/>
             )
         })}
 
