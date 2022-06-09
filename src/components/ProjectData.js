@@ -9,7 +9,10 @@ const ProjectData=(props)=>{
             <div className={styles.ProjectHead}><Link to={`/projectpage/${props.id}`}>
                 {props.heading}
              </Link></div>
-            <div className={styles.ProjectDesc}>{props.desc}</div>
+            <div className={styles.ProjectDesc}>{props.desc.slice(0,130)+"... "} 
+             <Link to={`/projectpage/${props.id}`}>
+                Read More
+             </Link></div>
 
         </div>
     )

@@ -11,6 +11,7 @@
 .author{
     align-self: flex-start;
     margin-left: 25px;
+    margin-top: 20px;
 }
 .description{
     text-align: justify;
@@ -49,4 +50,8 @@
         text-overflow: ellipsis;
         overflow: hidden;
     }
+}
+
+.card{
+    width: 100%;
 }
