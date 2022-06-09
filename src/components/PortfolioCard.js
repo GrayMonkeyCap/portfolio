@@ -12,11 +12,20 @@ const PortfolioCard=(props)=>{
              <div className={styles.heading}><Link to={`/projectpage/${props.id}`}>
                 {props.heading}
              </Link></div>
-             <div className={styles.desc}>{props.desc.slice(0,130)+"... "} 
-             <Link to={`/projectpage/${props.id}`}>
+             <ul className={styles.desc}>{props.points && props.points.map((datapoint)=>{
+                 return(
+                    <li>
+                        {datapoint}
+                    </li>
+                    
+                 )
+                
+             })} 
+
+             {/* <Link to={`/projectpage/${props.id}`}>
                 Read More
-             </Link>
-             </div>
+             </Link> */}
+             </ul>
              <div className={styles.author}>{props.author}</div>
              <div className={styles.duration}>{props.duration}</div>
          </div>
