@@ -6,10 +6,15 @@ const Footer=()=>{
         <div className={styles.footer}>
             <div className={styles.contact}>
                 <div>Reach out to me </div>
-                <div className={styles.contactemail}>
+                {/* <div className={styles.contactemail}>
                     <input type='email' placeholder='Enter email id'></input>
                     <button className={styles.emailbutton}>Send</button>
+                </div> */}
+                <div className={styles.contactme}>
+                <div>Phone No. : +91 8793183133</div>
+                <div>Emailid: <a href="mailto:bssiitb@gmail.com">bssiitb@gmail.com</a></div>
                 </div>
+                
             </div>
 
             <div className={styles.socialicons}>

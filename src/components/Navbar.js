@@ -57,6 +57,7 @@ const Navbar=()=>{
           <li> <NavLink exact to="/" activeClassName='active'>Home</NavLink></li>
           <li><NavLink exact to="/about" >About</NavLink></li>
           <li><NavLink exact to="/projects" >Portfolio</NavLink></li>
+          <li><NavLink exact to="/courses" >Courses</NavLink></li>
           <li><NavLink exact to="/publication" >Publication</NavLink></li>
           <li><a href={url} download target="_blank">Download Resume</a></li>
         </ul>    
@@ -70,6 +71,7 @@ const Navbar=()=>{
             <NavLink exact to="/" activeClassName='active'>Home</NavLink>
             <NavLink exact to="/about" >About</NavLink>
             <NavLink exact to="/projects" >Portfolio</NavLink>
+            <NavLink exact to="/courses" >Courses</NavLink>
             <NavLink exact to="/publication" >Publication</NavLink>
             <a href={url} download target="_blank">Download Resume</a>
         </div>}

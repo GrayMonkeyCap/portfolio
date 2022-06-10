@@ -7,6 +7,7 @@ import ProjectPage from './components/ProjectPage';
 import Portfolio from './Pages/Portfolio';
 import Publication from './Pages/Publication';
 import PublicationPage from './components/PublicationPage';
+import Courses from './components/Courses';
 
 
 
@@ -20,6 +21,7 @@ function App() {
         <Route path= "/projectpage/:id" element={<ProjectPage/>}/>
         <Route path= "/publication/:id" element={<PublicationPage/>}/>
         <Route path="/projects" element={<Portfolio/>}/>
+        <Route path="/courses" element={<Courses/>}/>
         <Route path="/publication" element={<Publication/>}/>
       </Routes>
     </BrowserRouter>
